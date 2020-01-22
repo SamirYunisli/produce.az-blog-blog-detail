@@ -9,6 +9,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to = 'blog_images')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    test_date = models.DateField(null = True, blank = True)
 
 
     def __str__(self):

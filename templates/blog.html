@@ -224,36 +224,36 @@
 
 						<ul>
 							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									July 2018
+								<a href="{% url 'get_archieve' 2020 01 %}" class="s-text13 p-t-5 p-b-5">
+									January 2020
 								</a>
 
 								<span class="s-text13">
-									(9)
+									({{ first_count }})
 								</span>
 							</li>
 
 							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									June 2018
+								<a href="{% url 'get_archieve' 2019 12 %}" class="s-text13 p-t-5 p-b-5">
+									December 2019
 								</a>
 
 								<span class="s-text13">
-									(39)
+									({{ second_count }})
 								</span>
 							</li>
 
 							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									May 2018
+								<a href="{% url 'get_archieve' 2019 11 %}" class="s-text13 p-t-5 p-b-5">
+									November 2019
 								</a>
 
 								<span class="s-text13">
-									(29)
+									({{ third_count}})
 								</span>
 							</li>
 
-							<li class="flex-sb-m">
+							{% comment %} <li class="flex-sb-m">
 								<a href="#" class="s-text13 p-t-5 p-b-5">
 									April  2018
 								</a>
@@ -301,7 +301,7 @@
 								<span class="s-text13">
 									(26)
 								</span>
-							</li>
+							</li> {% endcomment %}
 						</ul>
 
 						</div>

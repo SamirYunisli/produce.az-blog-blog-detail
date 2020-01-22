@@ -77,13 +77,17 @@
 				<div class="col-md-4 col-lg-3 p-b-80">
 					<div class="rightbar">
 						<!-- Search -->
-						<div class="pos-relative bo11 of-hidden">
-							<input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search">
 
-							<button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
-								<i class="fs-13 fa fa-search" aria-hidden="true"></i>
-							</button>
-						</div>
+						<form method="POST" action="{% url "get_blog" %}">
+							{% csrf_token %}
+							<div class="pos-relative bo11 of-hidden">
+								<input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search" placeholder="Search">
+
+								<button type="submit" class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
+									<i class="fs-13 fa fa-search" aria-hidden="true"></i>
+								</button>
+							</div>
+						</form>
 
 						<!-- Categories -->
 						<h4 class="m-text23 p-t-56 p-b-34">

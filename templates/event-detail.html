@@ -11,13 +11,13 @@
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
-		<a href="blog.html" class="s-text16">
+		<a href="event.html" class="s-text16">
 			Blog
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
 		<span class="s-text17">
-			{{ post.title }}
+			{{ event.title }}
 		</span>
 	</div>
 
@@ -29,22 +29,22 @@
 					<div class="p-r-50 p-r-0-lg">
 						<div class="p-b-40">
 							<div class="blog-detail-img wrap-pic-w">
-								<img src="{{ post.image.url }}" alt="IMG-BLOG">
+								<img src="{{ event.image.url }}" alt="IMG-BLOG">
 							</div>
 
 							<div class="blog-detail-txt p-t-33">
 								<h4 class="p-b-11 m-text24">
-									{{ post.title }}
+									{{ event.title }}
 								</h4>
 
 								<div class="s-text8 flex-w flex-m p-b-21">
 									<span>
-										{{ post.author }}
+										{{ event.author }}
 										<span class="m-l-3 m-r-6">|</span>
 									</span>
 
 									<span>
-										{{ post.created_at }}
+										{{ event.created_at }}
 										<span class="m-l-3 m-r-6">|</span>
 									</span>
 
@@ -59,11 +59,11 @@
 								</div>
 
 								<p class="p-b-25">
-									{{ post.description }}
+									{{ event.description }}
 								</p>
 
 								<p class="p-b-25">
-									{{ post.text }}
+									{{ event.text }}
 								</p>
 							</div>
 
@@ -78,7 +78,7 @@
 					<div class="rightbar">
 						<!-- Search -->
 
-						<form method="POST" action="{% url "get_blog" %}">
+						<form method="POST" action="{% url "create_event" %}">
 							{% csrf_token %}
 							<div class="pos-relative bo11 of-hidden">
 								<input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search" placeholder="Search">
@@ -214,7 +214,6 @@
 						</ul>
 
 						
-
 						<!-- Tags -->
 						
 						</div>
